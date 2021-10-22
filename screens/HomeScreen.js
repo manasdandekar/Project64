@@ -20,9 +20,9 @@ export default class HomeScreen extends Component{
     try{
       var word = dictionary[text]["word"]
 
-      var lexicalCategory = dictionary["lexicalCategory"]
+      var lexicalCategory = dictionary[text]["lexicalCategory"]
 
-      var definition = dictionary["definition"]
+      var definition = dictionary[text]["definition"]
       
       this.setState({
         "word" : word,
@@ -97,14 +97,14 @@ export default class HomeScreen extends Component{
                     <Text style={styles.detailsTitle}> Type :{" "}  </Text>
                     <Text style={{fontSize:18}}>
                       {/*Display the category here*/}
-                      {this.state.word}
+                      {this.state.lexicalCategory}
                     </Text>
                   </View>
                   <View style={{flexDirection:'row',flexWrap: 'wrap'}}>
                     <Text style={styles.detailsTitle}> Definition :{" "} </Text>
                     <Text style={{ fontSize:18}}>
                     {/*Display the definition here*/}
-                      {this.state.word}
+                      {this.state.definition}
                     </Text>
                   </View>
                 </View>
